@@ -15,4 +15,8 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Player Has Quit.");
         Application.Quit();
     }
+    public void Mainmenu()
+    {
+        SceneManager.LoadSceneAsync("MainMenu");
+    }
 }

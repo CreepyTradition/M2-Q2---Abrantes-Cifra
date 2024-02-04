@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Flag Pole
   - Platform 1
+  - Platforms
   layers:
   - Default
   - TransparentFX

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveForce = 4f;
-    public float maxSpeed = 3f;
-    public float jumpForce = 10f;
+    [SerializeField] public float moveForce = 5f;
+    [SerializeField] public float maxSpeed = 5f;
+    [SerializeField] public float jumpForce = 5f;
 
     private Rigidbody rb;
 
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
         // Setting Jump Input
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetKey(KeyCode.Space))
         {
             Jump();
         }
@@ -43,9 +43,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Jump()
+    private void Jump()
     {
-        // Apply upward force for the jump
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
 }
